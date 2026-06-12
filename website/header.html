@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshar Construction Header</title>
+  <style>
+    :root {
+      --navy: #03111d;
+      --navy-light: #0a1b28;
+      --gold: #d89c2b;
+      --gold-light: #edbd57;
+      --white: #f7f7f5;
+      --muted: #b7bec4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #eef1f3;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .site-header {
+      width: 100%;
+      background:
+        radial-gradient(circle at 78% 0%, rgba(24, 49, 67, 0.3), transparent 34%),
+        linear-gradient(90deg, #020c15 0%, var(--navy) 55%, #061725 100%);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    }
+
+    .navbar {
+      position: relative;
+      width: calc(100% - 48px);
+      max-width: 1440px;
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 44px;
+      height: 43px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    .tower {
+      position: relative;
+      width: 5px;
+      border: 1.5px solid var(--gold);
+      border-bottom: 0;
+      background: linear-gradient(90deg, transparent 42%, var(--gold) 43%, var(--gold) 57%, transparent 58%);
+    }
+
+    .tower::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      border-top: 1.5px solid var(--gold);
+      border-left: 1.5px solid var(--gold);
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .tower:nth-child(1),
+    .tower:nth-child(5) {
+      height: 15px;
+    }
+
+    .tower:nth-child(2),
+    .tower:nth-child(4) {
+      height: 27px;
+    }
+
+    .tower:nth-child(3) {
+      height: 38px;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      bottom: -2px;
+      height: 2px;
+      background: var(--gold);
+      clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 1.6px;
+    }
+
+    .brand-tagline {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: 3.2px;
+    }
+
+    .nav-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(22px, 2.5vw, 38px);
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      display: block;
+      padding: 30px 0 27px;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--gold-light);
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 19px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .quote-button {
+      min-width: 157px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border: 1px solid var(--gold-light);
+      border-radius: 5px;
+      background: linear-gradient(135deg, var(--gold-light), #c98618);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      color: #17120a;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .quote-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .quote-button svg {
+      width: 17px;
+      height: 17px;
+      transition: transform 0.2s ease;
+    }
+
+    .quote-button:hover svg {
+      transform: translateX(3px);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(216, 156, 43, 0.55);
+      border-radius: 5px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 21px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--gold-light);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    @media (max-width: 960px) {
+      .navbar {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .quote-button {
+        margin-left: auto;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        transform: none;
+        z-index: 10;
+        display: none;
+        padding: 10px 24px 20px;
+        background: var(--navy);
+        border-top: 1px solid rgba(216, 156, 43, 0.2);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.24);
+      }
+
+      .nav-menu.open {
+        display: block;
+      }
+
+      .nav-link {
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .nav-link.active::after {
+        right: auto;
+        bottom: 8px;
+        width: 26px;
+      }
+
+      .menu-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .navbar {
+        width: calc(100% - 28px);
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .brand-tagline {
+        font-size: 7px;
+        letter-spacing: 2.4px;
+      }
+
+      .brand-mark {
+        width: 36px;
+        transform: scale(0.86);
+      }
+
+      .quote-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Akshar Construction home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="tower"></span>
+          <span class="tower"></span>
+          <span class="tower"></span>
+          <span class="tower"></span>
+          <span class="tower"></span>
+        </span>
+        <span>
+          <span class="brand-name">AKSHAR</span>
+          <span class="brand-tagline">CONSTRUCTION</span>
+        </span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About Us</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#why-us">Why Choose Us</a></li>
+        <li><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+
+      <a class="quote-button" href="#quote">
+        Get a Quote
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h13M13 7l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuButton.classList.toggle("open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.addEventListener("click", (event) => {
+      if (event.target.matches(".nav-link")) {
+        navMenu.classList.remove("open");
+        menuButton.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>
