@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html data-wf-domain="bulork.webflow.io" data-wf-page="69438767731c8ece6e32a2c1" data-wf-site="69438766731c8ece6e32a274" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Webflow" />
+  <title>Reviews Section</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap");
+    @import url("https://cdn.prod.website-files.com/69438766731c8ece6e32a274/css/bulork.webflow.shared.20af53cb0.min.css");
+    @import url("https://cdn.prod.website-files.com/69438766731c8ece6e32a274/css/bulork.webflow.69438767731c8ece6e32a2c1.0c8b30497.opt.min.css");
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #f5f2ec;
+    }
+
+    .reviews-wrapper.top,
+    .reviews-wrapper.responsive-off,
+    .reviews-wrapper.responsive-on {
+      opacity: 1 !important;
+    }
+
+    .reviews-wrapper.top,
+    .reviews-wrapper.responsive-off {
+      transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reviews-wrapper.top:not(.is-visible),
+    .reviews-wrapper.responsive-off:not(.is-visible) {
+      opacity: 0 !important;
+      transform: translateY(24px);
+    }
+
+    .reviews-item-wrap {
+      will-change: transform, opacity;
+      transform-origin: center top;
+    }
+
+    .reviews-item-wrap._02 {
+      transform: translateY(30px) scale(0.94);
+    }
+
+    .reviews-item-wrap._03 {
+      transform: translateY(60px) scale(0.88);
+    }
+
+    .reviews-slider {
+      position: relative;
+    }
+
+    @media (max-width: 991px) {
+      .reviews-slider-mask {
+        overflow: hidden;
+      }
+
+      .reviews-slide {
+        display: none;
+        width: 100%;
+      }
+
+      .reviews-slide.is-active {
+        display: block;
+        animation: reviewsSlideIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .reviews-wrapper.responsive-on {
+        opacity: 1 !important;
+      }
+    }
+
+    @keyframes reviewsSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+<section class="section reviews">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="reviews-content-wrapper">
+                <div class="reviews-content-wrap">
+                    <div data-w-id="9cfb253e-3642-2f40-0f18-6802701d3871" style="opacity:1" class="reviews-wrapper top">
+                        <div data-wf--sub-title--variant="v1" class="sub-title">
+                            <div class="sub-title-dot"></div>
+                            <div class="sub-title-text">Our Reviews</div>
+                        </div>
+                        <h2 section-heading="" class="heading-xxl margin-top-16" style="font-family: 'Times New Roman', Times, serif;">Proven Success</h2>
+                    </div>
+                    <div data-w-id="14473498-23b1-227a-b5bb-7104da3f0082" style="opacity:1" class="reviews-wrapper responsive-off">
+                        <div class="reviews-wrap flex">
+                            <div reviews-item-one="" class="reviews-item-wrap _01">
+                                <div class="reviews-item">
+                                    <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg.webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                    <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                        <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                            /></div>
+                                        <div class="reviews-details-wrap">
+                                            <p class="text-large">&quot;Working with this team was a game-changer for our corporate expansion. They managed a complex 12-story build with total precision, finishing three weeks ahead of schedule and exactly on budget. Their professionalism
+                                                on-site is second to none.&quot;</p>
+                                        </div>
+                                        <div class="reviews-author-wrap">
+                                            <div class="reviews-author-inner">
+                                                <div class="reviews-line"></div>
+                                                <div class="heading-sm">Marcus Vane</div>
+                                            </div>
+                                            <div class="reviews-divider"></div>
+                                            <div class="reviews-author-inner">
+                                                <div class="text-regular">Director, Marcus Ltd.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1).webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1)-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1).webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div reviews-item-two="" class="reviews-item-wrap _02">
+                                <div class="reviews-item">
+                                    <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img.webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                    <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                        <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                            /></div>
+                                        <div class="reviews-details-wrap">
+                                            <p class="text-large">&quot;We had a vision for our family home for years, but we were afraid to start. They took our rough sketches and turned them into a masterpiece. The attention to detail in the custom timber work is something
+                                                we appreciate every single day.&quot;</p>
+                                        </div>
+                                        <div class="reviews-author-wrap">
+                                            <div class="reviews-author-inner">
+                                                <div class="reviews-line"></div>
+                                                <div class="heading-sm">Sterling Family</div>
+                                            </div>
+                                            <div class="reviews-divider"></div>
+                                            <div class="reviews-author-inner">
+                                                <div class="text-regular">Private Residence, Oak Ridge</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1.webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div reviews-item-three="" class="reviews-item-wrap _03">
+                                <div class="reviews-item">
+                                    <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2.webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                    <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                        <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                            /></div>
+                                        <div class="reviews-details-wrap">
+                                            <p class="text-large">&quot;What sets them apart is their integrity. When we hit an unexpected structural issue with our historical building, they didn’t hide it—they presented three solutions immediately and kept the project moving.
+                                                A truly transparent and expert partner.&quot;</p>
+                                        </div>
+                                        <div class="reviews-author-wrap">
+                                            <div class="reviews-author-inner">
+                                                <div class="reviews-line"></div>
+                                                <div class="heading-sm">David Chen</div>
+                                            </div>
+                                            <div class="reviews-divider"></div>
+                                            <div class="reviews-author-inner">
+                                                <div class="text-regular">Manager, Heritage Square</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img..webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img.-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img..webp 632w"
+                                            class="reviews-item-img" />
+                                        <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-w-id="46a2f66a-0e5d-afea-ca86-970e670d7142" class="reviews-wrapper responsive-on">
+                                <div data-delay="4000" data-animation="slide" class="reviews-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="380"
+                            data-infinite="true">
+                            <div class="reviews-slider-mask w-slider-mask">
+                                <div class="reviews-slide w-slide">
+                                    <div class="reviews-item">
+                                        <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f4b2c59633cf8acce3_Reviews%20IMg.webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                        <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                            <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                    src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                    alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                    class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                                /></div>
+                                            <div class="reviews-details-wrap">
+                                                <p class="text-large">&quot;Working with this team was a game-changer for our corporate expansion. They managed a complex 12-story build with total precision, finishing three weeks ahead of schedule and exactly on budget. Their
+                                                    professionalism on-site is second to none.&quot;</p>
+                                            </div>
+                                            <div class="reviews-author-wrap">
+                                                <div class="reviews-author-inner">
+                                                    <div class="reviews-line"></div>
+                                                    <div class="heading-sm">Marcus Vane</div>
+                                                </div>
+                                                <div class="reviews-divider"></div>
+                                                <div class="reviews-author-inner">
+                                                    <div class="text-regular">Director, Marcus Ltd.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1).webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1)-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69a9d7f41c4c78a99a52c0b8_Reviews%20IMg%20(1).webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-slide w-slide">
+                                    <div class="reviews-item">
+                                        <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4da6c1d15a9f52d20_Reviews%20Item%20Img.webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                        <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                            <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                    src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                    alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                    class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                                /></div>
+                                            <div class="reviews-details-wrap">
+                                                <p class="text-large">&quot;We had a vision for our family home for years, but we were afraid to start. They took our rough sketches and turned them into a masterpiece. The attention to detail in the custom timber work is something
+                                                    we appreciate every single day.&quot;</p>
+                                            </div>
+                                            <div class="reviews-author-wrap">
+                                                <div class="reviews-author-inner">
+                                                    <div class="reviews-line"></div>
+                                                    <div class="heading-sm">Sterling Family</div>
+                                                </div>
+                                                <div class="reviews-divider"></div>
+                                                <div class="reviews-author-inner">
+                                                    <div class="text-regular">Private Residence, Oak Ridge</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4d6aa813de0092fe4_Reviews%20Item%20Img-1.webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-slide w-slide">
+                                    <div class="reviews-item">
+                                        <div class="reviews-item-inner img left"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2.webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4a6a65b881f7214d3_Reviews%20Item%20Img-2.webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                        <div id="w-node-_13b71083-aace-2658-111b-5f5cdb7d5f4e-db7d5f4a" class="reviews-item-inner title">
+                                            <div class="reviews-star-wrap"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy"
+                                                    src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg"
+                                                    alt="Reviews Star Icon" class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon"
+                                                    class="reviews-star-icon" /><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/698f65fed23b76296dca7f13_Experts%20Quote%20Review%20Star.svg" alt="Reviews Star Icon" class="reviews-star-icon"
+                                                /></div>
+                                            <div class="reviews-details-wrap">
+                                                <p class="text-large">&quot;What sets them apart is their integrity. When we hit an unexpected structural issue with our historical building, they didn’t hide it—they presented three solutions immediately and kept the project
+                                                    moving. A truly transparent and expert partner.&quot;</p>
+                                            </div>
+                                            <div class="reviews-author-wrap">
+                                                <div class="reviews-author-inner">
+                                                    <div class="reviews-line"></div>
+                                                    <div class="heading-sm">David Chen</div>
+                                                </div>
+                                                <div class="reviews-divider"></div>
+                                                <div class="reviews-author-inner">
+                                                    <div class="text-regular">Manager, Heritage Square</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-item-inner img right"><img loading="lazy" src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img..webp" alt="Reviews Item Img" sizes="100vw" srcset="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img.-p-500.webp 500w, https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69aad6e4fc78467c065740ca_Reviews%20Item%20Img..webp 632w"
+                                                class="reviews-item-img" />
+                                            <div data-wf--overlay--variant="white" data-w-id="80067130-620a-4545-599e-8f235900a2ea" class="overlay"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glance-slider-arrow left-center w-slider-arrow-left">
+                                <div class="glance-slider-arrow-wrap"><img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69b1773cd70cc1fd65106bd1_glance%20arrow%20(1).svg" loading="lazy" alt="Glance Slider Arrow Img" class="glance-slider-arrow-img one" /></div>
+                            </div>
+                            <div class="glance-slider-arrow right-center w-slider-arrow-right">
+                                <div class="glance-slider-arrow-wrap"><img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/69b1773cd70cc1fd65106bd1_glance%20arrow%20(1).svg" loading="lazy" alt="Glance Slider Arrow Img" class="glance-slider-arrow-img one" /></div>
+                            </div>
+                            <div class="display-none w-slider-nav w-round w-num"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.className += " w-mod-js";
+      if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+        root.className += " w-mod-touch";
+      }
+
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
+
+      function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+          var script = document.createElement("script");
+          script.src = src;
+          script.type = "text/javascript";
+          script.onload = resolve;
+          script.onerror = reject;
+          document.body.appendChild(script);
+        });
+      }
+
+      function loadWebFont() {
+        return loadScript("https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js").then(function () {
+          if (window.WebFont) {
+            window.WebFont.load({
+              google: {
+                families: ["Mona Sans:300,400,500,600,700", "Outfit:300,400,500,600,700"]
+              }
+            });
+          }
+        }).catch(function () {});
+      }
+
+      function revealOnView() {
+        var revealItems = document.querySelectorAll(".reviews-wrapper.top, .reviews-wrapper.responsive-off");
+
+        if (!("IntersectionObserver" in window)) {
+          revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.16 });
+
+        revealItems.forEach(function (item) {
+          observer.observe(item);
+        });
+      }
+
+      function initDesktopStack() {
+        var wrapper = document.querySelector(".reviews-content-wrapper");
+        var items = Array.prototype.slice.call(document.querySelectorAll(".reviews-wrapper.responsive-off .reviews-item-wrap"));
+        var ticking = false;
+
+        if (!wrapper || items.length < 3) {
+          return;
+        }
+
+        function setItem(item, offset) {
+          var y;
+          var scale;
+          var rotation;
+          var opacity = 1;
+
+          if (offset < 0) {
+            y = offset * 300;
+            scale = 1;
+            rotation = Math.abs(offset) * 45;
+            opacity = clamp(1 + offset * 1.15, 0, 1);
+            item.style.transform = "translateY(" + y.toFixed(2) + "%) rotateX(" + rotation.toFixed(2) + "deg) scale(" + scale.toFixed(3) + ")";
+          } else {
+            y = offset * 30;
+            scale = clamp(1 - offset * 0.06, 0.88, 1);
+            rotation = 0;
+            item.style.transform = "translateY(" + y.toFixed(2) + "px) rotateX(" + rotation.toFixed(2) + "deg) scale(" + scale.toFixed(3) + ")";
+          }
+
+          item.style.opacity = opacity.toFixed(3);
+        }
+
+        function update() {
+          ticking = false;
+
+          if (window.innerWidth < 992) {
+            items.forEach(function (item) {
+              item.style.transform = "";
+              item.style.opacity = "";
+            });
+            return;
+          }
+
+          var rect = wrapper.getBoundingClientRect();
+          var maxScroll = Math.max(wrapper.offsetHeight - window.innerHeight, 1);
+          var progress = clamp(-rect.top / maxScroll, 0, 1);
+          var value = Math.min(progress * 2.35, 2);
+
+          items.forEach(function (item, index) {
+            setItem(item, index - value);
+          });
+        }
+
+        function requestUpdate() {
+          if (ticking) {
+            return;
+          }
+
+          ticking = true;
+          window.requestAnimationFrame(update);
+        }
+
+        update();
+        window.addEventListener("scroll", requestUpdate, { passive: true });
+        window.addEventListener("resize", requestUpdate);
+      }
+
+      function initMobileSlider() {
+        var slider = document.querySelector(".reviews-slider");
+
+        if (!slider) {
+          return;
+        }
+
+        var slides = Array.prototype.slice.call(slider.querySelectorAll(".reviews-slide"));
+        var prev = slider.querySelector(".w-slider-arrow-left");
+        var next = slider.querySelector(".w-slider-arrow-right");
+        var index = 0;
+
+        function show(nextIndex) {
+          index = (nextIndex + slides.length) % slides.length;
+          slides.forEach(function (slide, slideIndex) {
+            slide.classList.toggle("is-active", slideIndex === index);
+          });
+        }
+
+        if (prev) {
+          prev.addEventListener("click", function () {
+            show(index - 1);
+          });
+        }
+
+        if (next) {
+          next.addEventListener("click", function () {
+            show(index + 1);
+          });
+        }
+
+        show(0);
+      }
+
+      loadWebFont();
+      revealOnView();
+      initDesktopStack();
+      initMobileSlider();
+    })();
+  </script>
+</body>
+</html>
