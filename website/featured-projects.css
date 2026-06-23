@@ -27,6 +27,10 @@
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+.featured-services {
+  min-height: 340vh;
+}
+
 .fp-sticky {
   position: sticky;
   top: 0;
@@ -229,7 +233,7 @@
   min-height: 532px;
   will-change: transform, opacity;
   pointer-events: none;
-  transition: opacity 0.12s linear;
+  transition: opacity 0.28s ease;
 }
 
 .fp-panel-1 {

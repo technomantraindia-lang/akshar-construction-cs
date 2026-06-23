@@ -1013,7 +1013,7 @@ a {
 }
 
 .reviews-embed-section .reviews-content-wrapper {
-  height: 170vh !important;
+  height: 240vh !important;
 }
 
 @media (max-width: 991px) {

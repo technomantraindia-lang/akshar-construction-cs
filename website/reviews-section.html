@@ -394,16 +394,18 @@
           var opacity = 1;
 
           if (offset < 0) {
-            y = offset * 300;
+            y = offset * 140;
             scale = 1;
-            rotation = Math.abs(offset) * 45;
-            opacity = clamp(1 + offset * 1.15, 0, 1);
+            rotation = Math.abs(offset) * 14;
+            opacity = clamp(1 + offset * 1.25, 0, 1);
             item.style.transform = "translateY(" + y.toFixed(2) + "%) rotateX(" + rotation.toFixed(2) + "deg) scale(" + scale.toFixed(3) + ")";
+            item.style.zIndex = "1";
           } else {
             y = offset * 30;
             scale = clamp(1 - offset * 0.06, 0.88, 1);
             rotation = 0;
             item.style.transform = "translateY(" + y.toFixed(2) + "px) rotateX(" + rotation.toFixed(2) + "deg) scale(" + scale.toFixed(3) + ")";
+            item.style.zIndex = String(100 - Math.round(offset * 10));
           }
 
           item.style.opacity = opacity.toFixed(3);
@@ -416,6 +418,7 @@
             items.forEach(function (item) {
               item.style.transform = "";
               item.style.opacity = "";
+              item.style.zIndex = "";
             });
             return;
           }
@@ -423,7 +426,7 @@
           var rect = wrapper.getBoundingClientRect();
           var maxScroll = Math.max(wrapper.offsetHeight - window.innerHeight, 1);
           var progress = clamp(-rect.top / maxScroll, 0, 1);
-          var value = Math.min(progress * 2.35, 2);
+          var value = Math.min(progress * 2, 2);
 
           items.forEach(function (item, index) {
             setItem(item, index - value);

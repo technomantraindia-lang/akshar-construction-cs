@@ -10,7 +10,8 @@ function clamp(value, min = 0, max = 1) {
 
 function mapRange(value, inputMin, inputMax, outputMin, outputMax) {
   const progress = clamp((value - inputMin) / (inputMax - inputMin));
-  return outputMin + (outputMax - outputMin) * progress;
+  const easedProgress = progress * progress * (3 - 2 * progress);
+  return outputMin + (outputMax - outputMin) * easedProgress;
 }
 
 function setPercent(name, value) {
@@ -44,28 +45,28 @@ function updateProjectScroll() {
   setPercent("--img-4-y", 105);
   setPercent("--img-6-y", 105);
 
-  setPercent("--wrap-2-y", mapRange(progress, 0.28, 0.40, 105, 0));
-  setPercent("--wrap-3-y", mapRange(progress, 0.60, 0.72, 105, 0));
+  setPercent("--wrap-2-y", mapRange(progress, 0.30, 0.52, 105, 0));
+  setPercent("--wrap-3-y", mapRange(progress, 0.64, 0.86, 105, 0));
 
-  setPercent("--panel-1-y", mapRange(progress, 0.28, 0.40, 0, 105));
-  setNumber("--panel-1-opacity", mapRange(progress, 0.28, 0.36, 1, 0));
+  setPercent("--panel-1-y", mapRange(progress, 0.30, 0.52, 0, 105));
+  setNumber("--panel-1-opacity", mapRange(progress, 0.36, 0.50, 1, 0));
 
-  const panel2In = mapRange(progress, 0.28, 0.40, -105, 0);
-  const panel2Out = mapRange(progress, 0.60, 0.72, 0, 110);
-  const panel2Y = progress < 0.60 ? panel2In : panel2Out;
-  const panel2OpacityIn = mapRange(progress, 0.32, 0.40, 0, 1);
-  const panel2OpacityOut = mapRange(progress, 0.60, 0.68, 1, 0);
-  const panel2Opacity = progress < 0.60 ? panel2OpacityIn : panel2OpacityOut;
+  const panel2In = mapRange(progress, 0.30, 0.52, -105, 0);
+  const panel2Out = mapRange(progress, 0.64, 0.86, 0, 110);
+  const panel2Y = progress < 0.64 ? panel2In : panel2Out;
+  const panel2OpacityIn = mapRange(progress, 0.36, 0.52, 0, 1);
+  const panel2OpacityOut = mapRange(progress, 0.64, 0.80, 1, 0);
+  const panel2Opacity = progress < 0.64 ? panel2OpacityIn : panel2OpacityOut;
 
   setPercent("--panel-2-y", panel2Y);
   setNumber("--panel-2-opacity", panel2Opacity);
 
-  setPercent("--panel-3-y", mapRange(progress, 0.60, 0.72, -110, 0));
-  setNumber("--panel-3-opacity", mapRange(progress, 0.64, 0.72, 0, 1));
+  setPercent("--panel-3-y", mapRange(progress, 0.64, 0.86, -110, 0));
+  setNumber("--panel-3-opacity", mapRange(progress, 0.70, 0.86, 0, 1));
 
-  if (progress < 0.40) {
+  if (progress < 0.52) {
     setActivePanel(0);
-  } else if (progress < 0.72) {
+  } else if (progress < 0.86) {
     setActivePanel(1);
   } else {
     setActivePanel(2);
