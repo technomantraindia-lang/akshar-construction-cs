@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Akshar Construction</title>
+  <link rel="stylesheet" href="../website/quote-modal.css">
+  <link rel="stylesheet" href="../website/site-header.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@700&display=swap");
 
@@ -41,170 +43,6 @@
     img {
       display: block;
       max-width: 100%;
-    }
-
-    /* Header */
-    .site-header {
-      position: relative;
-      z-index: 20;
-      min-height: 72px;
-      background: linear-gradient(90deg, #020c15, #061827);
-      border-top: 1px solid rgba(217, 154, 40, 0.75);
-      border-bottom: 2px solid var(--proj-gold);
-    }
-
-    .navbar {
-      position: relative;
-      width: calc(100% - 40px);
-      max-width: 1580px;
-      min-height: 72px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      color: #fff;
-    }
-
-    .brand strong {
-      display: block;
-      font-size: 20px;
-      line-height: 1;
-      letter-spacing: 1.6px;
-    }
-
-    .brand small {
-      display: block;
-      margin-top: 4px;
-      color: #c6cbd0;
-      font-size: 7px;
-      letter-spacing: 3px;
-    }
-
-    .brand-mark {
-      position: relative;
-      width: 43px;
-      height: 39px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 2px;
-    }
-
-    .brand-mark i {
-      width: 5px;
-      border: 1.5px solid var(--proj-gold);
-      border-bottom: 0;
-    }
-
-    .brand-mark i:nth-child(1),
-    .brand-mark i:nth-child(5) { height: 14px; }
-    .brand-mark i:nth-child(2),
-    .brand-mark i:nth-child(4) { height: 25px; }
-    .brand-mark i:nth-child(3) { height: 36px; }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -2px;
-      left: 0;
-      height: 2px;
-      background: var(--proj-gold);
-    }
-
-    .nav-menu {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      gap: clamp(21px, 2.4vw, 38px);
-      list-style: none;
-    }
-
-    .nav-menu a {
-      position: relative;
-      display: block;
-      padding: 27px 0 25px;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .nav-menu a.active,
-    .nav-menu a:hover {
-      color: var(--proj-gold-light);
-    }
-
-    .nav-menu a.active::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      background: var(--proj-gold-light);
-    }
-
-    .header-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      min-height: 40px;
-      padding: 0 18px;
-      border-radius: 3px;
-      background: linear-gradient(135deg, var(--proj-gold-light), #c98518);
-      color: #1a1205;
-      font-size: 12px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .header-cta svg {
-      width: 16px;
-      height: 16px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid rgba(236, 184, 75, 0.45);
-      border-radius: 4px;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 4px auto;
-      background: var(--proj-gold-light);
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
     }
 
     /* Hero banner */
@@ -1184,44 +1022,6 @@
     }
 
     @media (max-width: 1080px) {
-      .nav-menu {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        transform: none;
-        flex-direction: column;
-        gap: 0;
-        padding: 12px 0 18px;
-        background: #061827;
-        border-bottom: 2px solid var(--proj-gold);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-      }
-
-      .nav-menu.open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-      }
-
-      .nav-menu a {
-        width: 100%;
-        padding: 14px 24px;
-      }
-
-      .nav-menu a.active::after {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-@media (max-width: 900px) {
       .fp-metrics {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -1404,7 +1204,7 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-      <a class="header-cta" href="mailto:info@aksharconstruction.com">
+      <a class="header-cta quote-trigger" href="#" role="button">
         Get a Quote
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 12h13m-5-5 5 5-5 5"/>
@@ -1789,17 +1589,6 @@
   </main>
 
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".nav-menu");
-
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        const open = menu.classList.toggle("open");
-        toggle.classList.toggle("open", open);
-        toggle.setAttribute("aria-expanded", String(open));
-      });
-    }
-
     const filterButtons = document.querySelectorAll(".project-filter");
     const projectItems = document.querySelectorAll(".fp-item");
 
@@ -2027,5 +1816,7 @@
       });
     })();
   </script>
+  <script src="../website/site-header.js"></script>
+  <script src="../website/quote-modal.js"></script>
 </body>
 </html>

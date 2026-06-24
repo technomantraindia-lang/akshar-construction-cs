@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Akshar Construction</title>
+  <link rel="stylesheet" href="../website/quote-modal.css">
+  <link rel="stylesheet" href="../website/site-header.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@700&display=swap");
 
@@ -54,166 +56,6 @@
       stroke: currentColor;
       stroke-linecap: round;
       stroke-linejoin: round;
-    }
-
-    .site-header {
-      position: relative;
-      z-index: 20;
-      min-height: 72px;
-      background: linear-gradient(90deg, #020c15, #061827);
-      border-top: 1px solid rgba(217, 154, 40, 0.75);
-      border-bottom: 2px solid var(--gold);
-    }
-
-    .navbar {
-      position: relative;
-      width: calc(100% - 40px);
-      max-width: 1580px;
-      min-height: 72px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      color: #f4f6f8;
-    }
-
-    .brand strong {
-      display: block;
-      font-size: 20px;
-      line-height: 1;
-      letter-spacing: 1.6px;
-    }
-
-    .brand small {
-      display: block;
-      margin-top: 4px;
-      color: #c6cbd0;
-      font-size: 7px;
-      letter-spacing: 3px;
-    }
-
-    .brand-mark {
-      position: relative;
-      width: 43px;
-      height: 39px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 2px;
-    }
-
-    .brand-mark i {
-      width: 5px;
-      border: 1.5px solid var(--gold);
-      border-bottom: 0;
-    }
-
-    .brand-mark i:nth-child(1),
-    .brand-mark i:nth-child(5) {
-      height: 14px;
-    }
-
-    .brand-mark i:nth-child(2),
-    .brand-mark i:nth-child(4) {
-      height: 25px;
-    }
-
-    .brand-mark i:nth-child(3) {
-      height: 36px;
-    }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -2px;
-      left: 0;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .nav-menu {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      gap: clamp(21px, 2.4vw, 38px);
-      list-style: none;
-    }
-
-    .nav-menu a {
-      position: relative;
-      display: block;
-      padding: 27px 0 25px;
-      color: #e9edf0;
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-      color: var(--gold-light);
-    }
-
-    .nav-menu a.active::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 18px;
-      left: 0;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .header-cta,
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 17px;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .header-cta {
-      min-width: 150px;
-      height: 40px;
-      border-radius: 4px;
-      background: linear-gradient(135deg, var(--gold-light), #c98518);
-      color: #171109;
-    }
-
-    .header-cta svg,
-    .button svg {
-      width: 17px;
-      stroke-width: 2;
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 40px;
-      height: 40px;
-      border: 1px solid var(--gold);
-      border-radius: 4px;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 5px auto;
-      background: var(--gold-light);
-      transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
     .contact-hero {
@@ -1304,11 +1146,72 @@
       text-align: center;
     }
 
-    @media (max-width: 1180px) {
-      .nav-menu {
-        gap: 18px;
-      }
+    /* Scroll reveal animations */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
 
+    .scroll-reveal--left {
+      transform: translate3d(-56px, 0, 0);
+    }
+
+    .scroll-reveal--right {
+      transform: translate3d(56px, 0, 0);
+    }
+
+    .scroll-reveal--up {
+      transform: translate3d(0, -48px, 0);
+    }
+
+    .scroll-reveal--down {
+      transform: translate3d(0, 48px, 0);
+    }
+
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .scroll-reveal.is-revealed-instantly {
+      transition: none !important;
+    }
+
+    .scroll-reveal[data-reveal-delay="1"] { transition-delay: 0.12s; }
+    .scroll-reveal[data-reveal-delay="2"] { transition-delay: 0.24s; }
+    .scroll-reveal[data-reveal-delay="3"] { transition-delay: 0.36s; }
+    .scroll-reveal[data-reveal-delay="4"] { transition-delay: 0.48s; }
+
+    .info-card.scroll-reveal,
+    .help-card.scroll-reveal,
+    .message-card.scroll-reveal,
+    .map-card.scroll-reveal {
+      transition-duration: 0.9s;
+    }
+
+    .info-card.scroll-reveal.is-visible:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 54px rgba(7, 21, 34, 0.14);
+    }
+
+    .help-card.scroll-reveal.is-visible:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 52px rgba(7, 21, 34, 0.14);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    @media (max-width: 1180px) {
       .contact-grid,
       .visit-grid {
         grid-template-columns: 1fr;
@@ -1334,63 +1237,8 @@
       }
     }
 
-    @media (max-width: 960px) {
-      .navbar {
-        min-height: 72px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .header-cta {
-        margin-left: auto;
-        margin-right: 14px;
-      }
-
-      .nav-menu {
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        transform: none;
-        z-index: 10;
-        display: none;
-        padding: 10px 24px 20px;
-        background: var(--navy);
-        border-top: 1px solid rgba(216, 156, 43, 0.2);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.24);
-      }
-
-      .nav-menu.open {
-        display: block;
-      }
-
-      .nav-menu a {
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      }
-
-      .nav-menu a.active::after {
-        right: auto;
-        bottom: 8px;
-        width: 26px;
-      }
-
-      .menu-toggle.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-
-      .menu-toggle.open span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-toggle.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
-    }
-
     @media (max-width: 760px) {
+      .contact-grid,
       .navbar,
       .section-wrap,
       .contact-hero__inner {
@@ -1521,27 +1369,6 @@
         font-size: 15px;
       }
     }
-
-    @media (max-width: 560px) {
-      .brand strong {
-        font-size: 17px;
-      }
-
-      .brand small {
-        font-size: 7px;
-        letter-spacing: 2.4px;
-      }
-
-      .brand-mark {
-        width: 36px;
-        transform: scale(0.86);
-        transform-origin: left center;
-      }
-
-      .header-cta {
-        display: none;
-      }
-    }
   </style>
 </head>
 <body>
@@ -1565,7 +1392,7 @@
         <li><a class="active" href="contact.html">Contact Us</a></li>
       </ul>
 
-      <a class="header-cta" href="mailto:info@aksharconstruction.com">
+      <a class="header-cta quote-trigger" href="#" role="button">
         Get a Quote
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 12h13m-5-5 5 5-5 5"></path>
@@ -1582,11 +1409,11 @@
     <section class="contact-hero">
       <div class="contact-hero__shade"></div>
       <div class="contact-hero__inner">
-        <span class="eyebrow"><i></i> Contact Us</span>
-        <h1>Let's Build Something <span>Great Together.</span></h1>
-        <p>We're here to answer your questions, understand your needs and provide the right solutions for your next project.</p>
+        <span class="eyebrow scroll-reveal scroll-reveal--down"><i></i> Contact Us</span>
+        <h1 class="scroll-reveal scroll-reveal--down" data-reveal-delay="1">Let's Build Something <span>Great Together.</span></h1>
+        <p class="scroll-reveal scroll-reveal--down" data-reveal-delay="2">We're here to answer your questions, understand your needs and provide the right solutions for your next project.</p>
 
-        <div class="hero-points">
+        <div class="hero-points scroll-reveal scroll-reveal--down" data-reveal-delay="3">
           <div class="hero-point">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M7 42h34M12 42V19h24v23M16 19l8-12 8 12M18 27h12M18 34h12M10 19h28"></path>
@@ -1609,7 +1436,7 @@
           </div>
         </div>
 
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <nav class="breadcrumbs scroll-reveal scroll-reveal--down" data-reveal-delay="4" aria-label="Breadcrumb">
           <a href="../index.html#home">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/>
@@ -1623,7 +1450,7 @@
 
     <div class="main-area">
       <section class="section-wrap contact-grid" aria-label="Contact form and contact details">
-        <div class="message-card">
+        <div class="message-card scroll-reveal scroll-reveal--left">
           <div class="form-head">
             <span class="dot-pattern" aria-hidden="true"></span>
             <span class="form-kicker">Project Enquiry</span>
@@ -1692,7 +1519,7 @@
         </div>
 
         <div class="info-list">
-          <article class="info-card">
+          <article class="info-card scroll-reveal scroll-reveal--right">
             <span class="info-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 5.18 2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.57 1.75l-1.27 1.27a16 16 0 0 0 6.54 6.54l1.27-1.27a2 2 0 0 1 1.75-.57l3 .45A2 2 0 0 1 22 16.92Z"></path>
@@ -1705,7 +1532,7 @@
             </div>
           </article>
 
-          <article class="info-card">
+          <article class="info-card scroll-reveal scroll-reveal--right" data-reveal-delay="1">
             <span class="info-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 6h16v12H4z"></path>
@@ -1719,7 +1546,7 @@
             </div>
           </article>
 
-          <article class="info-card">
+          <article class="info-card scroll-reveal scroll-reveal--right" data-reveal-delay="2">
             <span class="info-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 21s7-5.2 7-12A7 7 0 0 0 5 9c0 6.8 7 12 7 12Z"></path>
@@ -1732,7 +1559,7 @@
             </div>
           </article>
 
-          <article class="info-card">
+          <article class="info-card scroll-reveal scroll-reveal--right" data-reveal-delay="3">
             <span class="info-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="12" r="9"></circle>
@@ -1745,7 +1572,7 @@
             </div>
           </article>
 
-          <a class="info-card" href="https://wa.me/918511366152">
+          <a class="info-card scroll-reveal scroll-reveal--right" data-reveal-delay="4" href="https://wa.me/918511366152">
             <span class="info-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20.5 11.9a8.5 8.5 0 0 1-12.3 7.6L4 20.5l1.1-4.1a8.5 8.5 0 1 1 15.4-4.5Z"></path>
@@ -1764,7 +1591,7 @@
 
       <section class="visit-section">
         <div class="section-wrap visit-grid">
-          <div class="visit-copy">
+          <div class="visit-copy scroll-reveal scroll-reveal--left">
             <span class="eyebrow">Visit Our Office</span>
             <h2>Find Us Easily</h2>
             <p>We welcome you to visit our office and discuss your project in person. Let's turn your ideas into reality.</p>
@@ -1788,7 +1615,7 @@
             </ul>
           </div>
 
-          <div class="map-card" aria-label="Akshar Construction office location on Google Maps">
+          <div class="map-card scroll-reveal scroll-reveal--right" data-reveal-delay="1" aria-label="Akshar Construction office location on Google Maps">
             <iframe
               title="Akshar Construction office location"
               src="https://www.google.com/maps?q=SG%20Highway%2C%20Ahmedabad%2C%20Gujarat%20380015&output=embed"
@@ -1804,11 +1631,11 @@
       </section>
 
       <section class="section-wrap help-section">
-        <div class="help-heading">How We Can Help</div>
-        <h2>Why Reach Out to Us?</h2>
+        <div class="help-heading scroll-reveal scroll-reveal--up">How We Can Help</div>
+        <h2 class="scroll-reveal scroll-reveal--up" data-reveal-delay="1">Why Reach Out to Us?</h2>
 
         <div class="help-grid">
-          <article class="help-card">
+          <article class="help-card scroll-reveal scroll-reveal--up">
             <svg viewBox="0 0 64 64" aria-hidden="true">
               <path d="M10 50h44M15 50V32l17-13 17 13v18M24 50V38h16v12M20 26l-4-10h10M44 26l4-10H38"></path>
               <path d="M8 19c5-6 10-9 17-9M56 19c-5-6-10-9-17-9" stroke="var(--gold)"></path>
@@ -1819,7 +1646,7 @@
             </div>
           </article>
 
-          <article class="help-card">
+          <article class="help-card scroll-reveal scroll-reveal--up" data-reveal-delay="1">
             <svg viewBox="0 0 64 64" aria-hidden="true">
               <path d="M16 10h26l8 8v36H16zM42 10v10h8M23 27h18M23 36h18M23 45h11"></path>
               <path d="M10 20h10M10 32h10M10 44h10" stroke="var(--gold)"></path>
@@ -1830,7 +1657,7 @@
             </div>
           </article>
 
-          <article class="help-card">
+          <article class="help-card scroll-reveal scroll-reveal--up" data-reveal-delay="2">
             <svg viewBox="0 0 64 64" aria-hidden="true">
               <path d="M22 52V14h20v38M16 52h32M28 22h8M28 31h8M28 40h8"></path>
               <path d="M16 22h-5v30M48 22h5v30" stroke="var(--gold)"></path>
@@ -1841,7 +1668,7 @@
             </div>
           </article>
 
-          <article class="help-card">
+          <article class="help-card scroll-reveal scroll-reveal--up" data-reveal-delay="3">
             <svg viewBox="0 0 64 64" aria-hidden="true">
               <circle cx="32" cy="23" r="10"></circle>
               <path d="M18 55c2-10 7-16 14-16s12 6 14 16M13 30l-6 4M51 30l6 4M15 15 9 10M49 15l6-5"></path>
@@ -1854,7 +1681,7 @@
           </article>
         </div>
 
-        <div class="project-cta">
+        <div class="project-cta scroll-reveal scroll-reveal--up" data-reveal-delay="1">
           <div>
             <h2>Ready to Discuss <span>Your Project?</span></h2>
             <p>Our team is ready to listen, plan and deliver excellence for your residential, commercial or industrial construction needs.</p>
@@ -1878,7 +1705,7 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer scroll-reveal scroll-reveal--up">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -1965,22 +1792,50 @@
   </footer>
 
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".nav-menu");
+    (function initScrollReveal() {
+      const revealEls = document.querySelectorAll(".scroll-reveal");
+      if (!revealEls.length) return;
 
-    toggle.addEventListener("click", () => {
-      const open = menu.classList.toggle("open");
-      toggle.classList.toggle("open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-
-    menu.addEventListener("click", (event) => {
-      if (event.target.matches("a")) {
-        menu.classList.remove("open");
-        toggle.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReducedMotion) {
+        revealEls.forEach((el) => el.classList.add("is-visible", "is-revealed-instantly"));
+        return;
       }
-    });
+
+      const reveal = (el, instant) => {
+        if (instant) el.classList.add("is-revealed-instantly");
+        el.classList.add("is-visible");
+        if (instant) requestAnimationFrame(() => el.classList.remove("is-revealed-instantly"));
+      };
+
+      const isInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            if (el.classList.contains("is-visible")) return;
+            reveal(el, false);
+            observer.unobserve(el);
+          });
+        },
+        { threshold: 0.14, rootMargin: "0px 0px -6% 0px" }
+      );
+
+      revealEls.forEach((el) => {
+        if (isInViewport(el)) {
+          reveal(el, true);
+          return;
+        }
+        observer.observe(el);
+      });
+    })();
   </script>
+  <script src="../website/site-header.js"></script>
+  <script src="../website/quote-modal.js"></script>
 </body>
 </html>

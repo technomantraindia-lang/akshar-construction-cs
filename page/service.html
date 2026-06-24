@@ -28,7 +28,7 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-      <a class="header-cta" href="mailto:info@aksharconstruction.com">
+      <a class="header-cta quote-trigger" href="#" role="button">
         Get a Quote
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 12h13m-5-5 5 5-5 5"/>
@@ -235,17 +235,6 @@
   </main>
 
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".nav-menu");
-
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        const open = menu.classList.toggle("open");
-        toggle.classList.toggle("open", open);
-        toggle.setAttribute("aria-expanded", String(open));
-      });
-    }
-
     const footerFrame = document.querySelector(".footer-embed");
 
     function syncFooterHeight() {
@@ -431,5 +420,7 @@
       });
     })();
   </script>
+  <script src="../website/site-header.js"></script>
+  <script src="../website/quote-modal.js"></script>
 </body>
 </html>
