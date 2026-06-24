@@ -1,6 +1,7 @@
 const section = document.querySelector(".featured-projects");
 const panels = document.querySelectorAll(".fp-panel");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mobileQuery = window.matchMedia("(max-width: 900px)");
 
 if (section && panels.length) {
 
@@ -32,22 +33,22 @@ function setActivePanel(index) {
   section.style.setProperty("--panel-3-z", index === 2 ? "3" : "1");
 }
 
-function updateProjectScroll() {
-  if (reduceMotion) {
-    return;
-  }
-
-  const rect = section.getBoundingClientRect();
-  const maxScroll = section.offsetHeight - window.innerHeight;
-  const progress = clamp(-rect.top / maxScroll);
-
+function resetMobilePanels() {
   setPercent("--img-2-y", 105);
   setPercent("--img-4-y", 105);
   setPercent("--img-6-y", 105);
+  setPercent("--wrap-2-y", 105);
+  setPercent("--wrap-3-y", 105);
+  setPercent("--panel-1-y", 0);
+  setPercent("--panel-2-y", 0);
+  setPercent("--panel-3-y", 0);
+  setNumber("--panel-1-opacity", 1);
+  setNumber("--panel-2-opacity", 1);
+  setNumber("--panel-3-opacity", 1);
+  panels.forEach((panel) => panel.classList.add("is-active"));
+}
 
-  setPercent("--wrap-2-y", mapRange(progress, 0.30, 0.52, 105, 0));
-  setPercent("--wrap-3-y", mapRange(progress, 0.64, 0.86, 105, 0));
-
+function updatePanelStack(progress) {
   setPercent("--panel-1-y", mapRange(progress, 0.30, 0.52, 0, 105));
   setNumber("--panel-1-opacity", mapRange(progress, 0.36, 0.50, 1, 0));
 
@@ -73,6 +74,29 @@ function updateProjectScroll() {
   }
 }
 
+function updateProjectScroll() {
+  section.classList.toggle("fp-mobile-mode", mobileQuery.matches);
+
+  if (reduceMotion) {
+    resetMobilePanels();
+    return;
+  }
+
+  const rect = section.getBoundingClientRect();
+  const maxScroll = Math.max(section.offsetHeight - window.innerHeight, 1);
+  const progress = clamp(-rect.top / maxScroll);
+
+  if (!mobileQuery.matches) {
+    setPercent("--img-2-y", 105);
+    setPercent("--img-4-y", 105);
+    setPercent("--img-6-y", 105);
+    setPercent("--wrap-2-y", mapRange(progress, 0.30, 0.52, 105, 0));
+    setPercent("--wrap-3-y", mapRange(progress, 0.64, 0.86, 105, 0));
+  }
+
+  updatePanelStack(progress);
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -90,4 +114,5 @@ revealObserver.observe(section);
 updateProjectScroll();
 window.addEventListener("scroll", updateProjectScroll, { passive: true });
 window.addEventListener("resize", updateProjectScroll);
+mobileQuery.addEventListener("change", updateProjectScroll);
 }

@@ -6,6 +6,7 @@
   <title>About Us | Akshar Construction</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="../website/page-shared.css">
 </head>
 <body>
   <header class="site-header">
@@ -35,7 +36,7 @@
         </svg>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -46,8 +47,8 @@
       <div class="about-hero__shade"></div>
       <div class="about-hero__inner">
         <span class="eyebrow"><i></i> About Us</span>
-        <h1>Our <span>About Us</span></h1>
-        <p>Learn about Akshar Construction, our values, our team, and the commitment behind every project we deliver.</p>
+        <h1>Building With <span>Purpose &amp; Precision</span></h1>
+        <p>Discover the people, principles, and passion behind every structure we deliver across residential, commercial, and industrial projects.</p>
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="../index.html#home">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -126,36 +127,129 @@
       </div>
     </section>
 
-    <section class="stats-strip" aria-label="Company statistics">
-      <article>
-        <svg viewBox="0 0 48 48" aria-hidden="true">
-          <path d="M7 42h34M10 42V14h15v28M25 42V23h13v19M15 19h4m-4 6h4m-4 6h4m-4 6h4m11-9h3m-3 6h3"/>
-        </svg>
-        <strong>15+</strong>
-        <span>Years Experience</span>
-      </article>
-      <article>
-        <svg viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="24" r="15"/><circle cx="24" cy="24" r="7"/><path d="M24 4v5m0 30v5M4 24h5m30 0h5"/>
-        </svg>
-        <strong>250+</strong>
-        <span>Projects Completed</span>
-      </article>
-      <article>
-        <svg viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="13" r="6"/><circle cx="10" cy="18" r="5"/><circle cx="38" cy="18" r="5"/>
-          <path d="M14 41v-7c0-6 4-10 10-10s10 4 10 10v7M3 40v-6c0-5 3-8 8-8M45 40v-6c0-5-3-8-8-8"/>
-        </svg>
-        <strong>100+</strong>
-        <span>Skilled Professionals</span>
-      </article>
-      <article>
-        <svg viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="18" r="11"/><path d="m17 28-3 15 10-6 10 6-3-15M19 18l4 4 7-8"/>
-        </svg>
-        <strong>100%</strong>
-        <span>Client Satisfaction</span>
-      </article>
+    <section class="about-proof" aria-label="Vision, mission, and company strengths">
+      <div class="stats-strip" aria-label="Company statistics">
+        <article>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M7 42h34M10 42V14h15v28M25 42V23h13v19M15 19h4m-4 6h4m-4 6h4m-4 6h4m11-9h3m-3 6h3"/>
+          </svg>
+          <strong>15+</strong>
+          <span>Years of Experience</span>
+        </article>
+        <article>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M8 40h32M13 40V18h10v22M25 40V12h10v28M16 22h4m-4 6h4m-4 6h4m12-16h4m-4 6h4m-4 6h4M22 18h4"/>
+          </svg>
+          <strong>250+</strong>
+          <span>Projects Completed</span>
+        </article>
+        <article>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="14" r="6"/><circle cx="12" cy="19" r="5"/><circle cx="36" cy="19" r="5"/>
+            <path d="M14 41v-6c0-7 4-11 10-11s10 4 10 11v6M4 40v-5c0-5 3-8 8-8M44 40v-5c0-5-3-8-8-8"/>
+          </svg>
+          <strong>100+</strong>
+          <span>Happy Clients</span>
+        </article>
+        <article>
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M8 41h32M13 41V27h8v14M27 41V20h8v21M17 27v-7m14 0v-7M11 20h12m2-7h12M16 13h16M20 6h8"/>
+          </svg>
+          <strong>150+</strong>
+          <span>Skilled Professionals</span>
+        </article>
+      </div>
+
+      <div class="proof-inner">
+        <div class="section-heading">
+          <h2>Our Vision, Mission &amp; Commitment</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/>
+              </svg>
+            </span>
+            <h3>Our Vision</h3>
+            <p>To become one of India's most trusted construction brands, known for quality, innovation, and responsible growth.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="15"/><circle cx="24" cy="24" r="7"/><path d="M24 4v7m0 26v7M4 24h7m26 0h7"/>
+              </svg>
+            </span>
+            <h3>Our Mission</h3>
+            <p>To deliver superior construction solutions while maintaining commitment to safety, quality, customer satisfaction, and transparent execution.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M14 25 7 18l7-7 9 9M34 25l7-7-7-7-9 9M14 26l10 10 10-10M22 18l8 8"/>
+              </svg>
+            </span>
+            <h3>Our Commitment</h3>
+            <p>We are committed to honesty, transparency, sustainable practices, and long-term relationships built on trust and reliable outcomes.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="approach-section" aria-label="How Akshar Construction works">
+      <div class="approach-grid">
+        <div class="approach-copy">
+          <span class="eyebrow"><i></i> How We Work</span>
+          <h2>A Clear Process From <span>Planning To Handover</span></h2>
+          <p>Every project is managed with structured planning, site discipline, transparent updates, and quality checks at each important stage.</p>
+
+          <div class="timeline-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Site Understanding</h3>
+                <p>We study project requirements, site conditions, timelines, and client expectations before execution begins.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Planning &amp; Coordination</h3>
+                <p>Materials, manpower, equipment, and schedules are coordinated for smooth and predictable progress.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Quality Execution</h3>
+                <p>Our team follows practical site supervision, safety standards, and workmanship checks throughout the build.</p>
+              </div>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <h3>Final Handover</h3>
+                <p>Before delivery, we review finishing, details, and client feedback so the result is reliable and ready to use.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="approach-panel">
+          <figure>
+            <img src="../assets/gallery-worker.png" alt="Construction worker reviewing site work">
+          </figure>
+          <div class="quality-note">
+            <span>Quality Promise</span>
+            <strong>Built with discipline, delivered with responsibility.</strong>
+            <p>We focus on durable materials, honest communication, and practical construction solutions for every client.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="story-section">
@@ -166,8 +260,9 @@
           <p>What started as a small team with a big vision is now a growing construction company known for its reliability, quality, and innovation. Over the years, we have successfully completed diverse projects, earning the trust of our clients and partners.</p>
           <p>Our journey is built on hard work, continuous learning, and a commitment to creating spaces that inspire.</p>
           <div class="signature">
+            <span class="signature__line" aria-hidden="true"></span>
             <strong>Amit Sharma</strong>
-            <span>Managing Director</span>
+            <span>Managing Director, Akshar Construction</span>
           </div>
         </div>
 
@@ -229,18 +324,28 @@
       </div>
     </section>
 
-    <section class="about-cta">
-      <div>
-        <h2>Let's Build Something Extraordinary <span>Together</span></h2>
-      </div>
-      <div>
-        <p>Ready to bring your vision to life? Let's connect and build a better future together.</p>
-        <a href="../index.html#contact">
-          Get in Touch
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h13m-5-5 5 5-5 5"/>
-          </svg>
-        </a>
+    <section class="service-cta-wrap">
+      <div class="service-cta-banner">
+        <div class="service-cta-banner__shade"></div>
+        <div class="service-cta-banner__inner">
+          <div class="service-cta-banner__copy">
+            <span class="eyebrow"><i></i> Have a Project in Mind?</span>
+            <h2>Let's Build Something Extraordinary <span>Together</span></h2>
+            <p>Ready to bring your vision to life? Reach out today for a consultation and let's lay the foundation for your next success.</p>
+            <div class="service-cta-actions">
+              <a class="service-cta-btn service-cta-btn--primary" href="mailto:info@aksharconstruction.com">
+                Start the Conversation
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
+              </a>
+              <a class="service-cta-btn service-cta-btn--outline" href="tel:+918511366152">
+                Call +91 85113 66152
+              </a>
+            </div>
+          </div>
+          <figure class="service-cta-banner__visual">
+            <img src="../assets/gallery-building.png" alt="Construction project in progress">
+          </figure>
+        </div>
       </div>
     </section>
 

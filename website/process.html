@@ -59,6 +59,247 @@
       html.is-home-embed .workflow-wrapper {
         min-height: 0;
       }
+
+      html.is-home-embed .workflow-experts.on {
+        display: none !important;
+      }
+
+      html.is-home-embed .workflow-section.off {
+        display: none !important;
+      }
+
+      html.is-home-embed .workflow-mobile-embed {
+        display: block;
+      }
+
+      html.is-home-embed,
+      html.is-home-embed body {
+        overflow: auto;
+        height: auto;
+      }
+
+      html.is-home-embed .workflow-section.off .section.workflow {
+        padding: 48px 20px 56px !important;
+        background: #151515;
+      }
+
+      html.is-home-embed .workflow-section.off .heading-xxl,
+      html.is-home-embed .workflow-section.off .heading-md.is-white,
+      html.is-home-embed .workflow-section.off .text-large.is-white-90,
+      html.is-home-embed .workflow-section.off .workflow-card-number {
+        color: #fff;
+      }
+
+      html.is-home-embed .workflow-section.off .sub-title-text {
+        color: #ecb84b !important;
+      }
+
+      html.is-home-embed .workflow-btn-wrap {
+        display: none;
+      }
+    }
+
+    .workflow-mobile-embed {
+      display: none;
+      padding: 48px 20px 56px;
+      background: #151515;
+      color: #fff;
+      font-family: "Montserrat", Arial, sans-serif;
+    }
+
+    @media (max-width: 991px) {
+      html.is-home-embed .workflow-mobile-embed {
+        display: block !important;
+      }
+    }
+
+    .workflow-mobile-embed__head {
+      margin-bottom: 28px;
+    }
+
+    .workflow-mobile-embed__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #ecb84b;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .workflow-mobile-embed__eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ecb84b, #c98518);
+    }
+
+    .workflow-mobile-embed__head h2 {
+      margin-top: 14px;
+      color: #fff;
+      font-family: "Roboto Slab", Georgia, serif;
+      font-size: clamp(30px, 8vw, 40px);
+      line-height: 1.08;
+    }
+
+    .workflow-mobile-embed__list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .workflow-mobile-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(236, 184, 75, 0.24);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+    }
+
+    .workflow-mobile-card::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      left: 0;
+      z-index: 1;
+      width: 3px;
+      border-radius: 0 3px 3px 0;
+      background: linear-gradient(180deg, #ecb84b, #c98518);
+      transform: scaleY(0);
+      transform-origin: top center;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.18s;
+    }
+
+    .workflow-mobile-card.is-visible::before {
+      transform: scaleY(1);
+    }
+
+    .wm-reveal {
+      opacity: 0;
+      transform: translate3d(0, 48px, 0);
+      transition:
+        opacity 0.82s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.82s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .wm-reveal--down {
+      transform: translate3d(0, -40px, 0);
+    }
+
+    .wm-reveal--up {
+      transform: translate3d(0, 52px, 0);
+    }
+
+    .workflow-mobile-card.wm-reveal:nth-child(odd) {
+      transform: translate3d(-86px, 34px, 0) scale(0.96);
+    }
+
+    .workflow-mobile-card.wm-reveal:nth-child(even) {
+      transform: translate3d(86px, 34px, 0) scale(0.96);
+    }
+
+    .wm-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .workflow-mobile-card.wm-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .wm-reveal[data-wm-delay="1"] { transition-delay: 0.12s; }
+    .wm-reveal[data-wm-delay="2"] { transition-delay: 0.24s; }
+    .wm-reveal[data-wm-delay="3"] { transition-delay: 0.36s; }
+
+    .workflow-mobile-card.wm-reveal {
+      transition-duration: 0.95s;
+    }
+
+    .workflow-mobile-card__image {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .workflow-mobile-card__image img {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      transform: scale(1.08);
+      transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .workflow-mobile-card.is-visible .workflow-mobile-card__image img {
+      transform: scale(1);
+    }
+
+    .workflow-mobile-card__body {
+      padding: 20px 18px 22px;
+    }
+
+    .workflow-mobile-card__meta {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .workflow-mobile-card__step {
+      color: #fff;
+      font-family: "Roboto Slab", Georgia, serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .workflow-mobile-card__total {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .workflow-mobile-card__label {
+      margin-bottom: 12px;
+      color: #ecb84b;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .workflow-mobile-card__title {
+      margin: 0 0 12px;
+      color: #fff;
+      font-family: "Roboto Slab", Georgia, serif;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .workflow-mobile-card__text {
+      margin: 0;
+      color: #dce5ee;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wm-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .workflow-mobile-card::before {
+        transform: scaleY(1);
+      }
+
+      .workflow-mobile-card__image img {
+        transform: none;
+      }
     }
 
     .workflow-wrapper,
@@ -735,6 +976,75 @@
     </div>
     </section>
     </div>
+
+  <section class="workflow-mobile-embed" aria-label="Our Process">
+    <div class="workflow-mobile-embed__head">
+      <span class="workflow-mobile-embed__eyebrow wm-reveal wm-reveal--down">Our Process</span>
+      <h2 class="wm-reveal wm-reveal--down" data-wm-delay="1">How We Work</h2>
+    </div>
+    <div class="workflow-mobile-embed__list">
+      <article class="workflow-mobile-card wm-reveal wm-reveal--up">
+        <figure class="workflow-mobile-card__image">
+          <img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/699c60b37b06caddcf0d381d_Workflow%20Card%20Img.webp" alt="Site visit and consultation">
+        </figure>
+        <div class="workflow-mobile-card__body">
+          <div class="workflow-mobile-card__meta">
+            <span class="workflow-mobile-card__step">01</span>
+            <span class="workflow-mobile-card__total">/ 04</span>
+          </div>
+          <div class="workflow-mobile-card__label">Consultation</div>
+          <h3 class="workflow-mobile-card__title">Site Visit &amp; Consultation</h3>
+          <p class="workflow-mobile-card__text">We understand your requirements, visit the site, review the scope, and discuss budget, timeline, and practical construction needs.</p>
+        </div>
+      </article>
+
+      <article class="workflow-mobile-card wm-reveal wm-reveal--up" data-wm-delay="1">
+        <figure class="workflow-mobile-card__image">
+          <img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/699ddfe37beeba4bf2789b95_Workflow%20Img%2001.webp" alt="Planning and estimation">
+        </figure>
+        <div class="workflow-mobile-card__body">
+          <div class="workflow-mobile-card__meta">
+            <span class="workflow-mobile-card__step">02</span>
+            <span class="workflow-mobile-card__total">/ 04</span>
+          </div>
+          <div class="workflow-mobile-card__label">Planning</div>
+          <h3 class="workflow-mobile-card__title">Planning &amp; Estimation</h3>
+          <p class="workflow-mobile-card__text">Our team prepares the execution plan, estimates materials, coordinates drawings, permissions, manpower, and schedule before work begins.</p>
+        </div>
+      </article>
+
+      <article class="workflow-mobile-card wm-reveal wm-reveal--up" data-wm-delay="2">
+        <figure class="workflow-mobile-card__image">
+          <img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/699de08658c6f6591ad00e7a_workflow%20img%2003.webp" alt="Site execution">
+        </figure>
+        <div class="workflow-mobile-card__body">
+          <div class="workflow-mobile-card__meta">
+            <span class="workflow-mobile-card__step">03</span>
+            <span class="workflow-mobile-card__total">/ 04</span>
+          </div>
+          <div class="workflow-mobile-card__label">Execution</div>
+          <h3 class="workflow-mobile-card__title">Site Execution</h3>
+          <p class="workflow-mobile-card__text">Skilled supervisors and workers execute civil, commercial, and industrial work with regular updates and disciplined site management.</p>
+        </div>
+      </article>
+
+      <article class="workflow-mobile-card wm-reveal wm-reveal--up" data-wm-delay="3">
+        <figure class="workflow-mobile-card__image">
+          <img src="https://cdn.prod.website-files.com/69438766731c8ece6e32a274/699de0c8f7c2bdb220952f32_workflow%20img%2004.webp" alt="Final inspection and handover">
+        </figure>
+        <div class="workflow-mobile-card__body">
+          <div class="workflow-mobile-card__meta">
+            <span class="workflow-mobile-card__step">04</span>
+            <span class="workflow-mobile-card__total">/ 04</span>
+          </div>
+          <div class="workflow-mobile-card__label">Handover</div>
+          <h3 class="workflow-mobile-card__title">Final Inspection &amp; Handover</h3>
+          <p class="workflow-mobile-card__text">Before handover, we inspect finishing, safety, and structural quality so the completed work matches the agreed standards.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <script>
     (function () {
       var root = document.documentElement;
@@ -843,6 +1153,85 @@
       showWorkflow();
       initWorkflowScroll();
 
+      function revealMobileItem(element) {
+        if (!element || element.classList.contains("is-visible")) {
+          return;
+        }
+
+        element.classList.add("is-visible");
+      }
+
+      function checkMobileReveal() {
+        var mobileSection = document.querySelector(".workflow-mobile-embed");
+        if (!mobileSection || window.getComputedStyle(mobileSection).display === "none") {
+          return;
+        }
+
+        var items = mobileSection.querySelectorAll(".wm-reveal");
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        items.forEach(function (element) {
+          var rect = element.getBoundingClientRect();
+          if (rect.top < viewportHeight * 0.9 && rect.bottom > viewportHeight * 0.08) {
+            revealMobileItem(element);
+          }
+        });
+      }
+
+      function initMobileReveal() {
+        var mobileSection = document.querySelector(".workflow-mobile-embed");
+        if (!mobileSection) {
+          return;
+        }
+
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) {
+          mobileSection.querySelectorAll(".wm-reveal").forEach(function (element) {
+            element.classList.add("is-visible");
+          });
+          return;
+        }
+
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                revealMobileItem(entry.target);
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+          );
+
+          mobileSection.querySelectorAll(".wm-reveal").forEach(function (element) {
+            observer.observe(element);
+          });
+        }
+
+        checkMobileReveal();
+        window.addEventListener("resize", checkMobileReveal);
+
+        if (document.documentElement.classList.contains("is-home-embed")) {
+          window.addEventListener("message", function (event) {
+            if (!event.data || event.data.type !== "akshar-process-mobile-tick") {
+              return;
+            }
+
+            checkMobileReveal();
+          });
+        }
+      }
+
+      initMobileReveal();
+      window.addEventListener("load", function () {
+        checkMobileReveal();
+        setTimeout(checkMobileReveal, 350);
+      });
+
       function loadScript(src) {
         return new Promise(function (resolve, reject) {
           var script = document.createElement("script");
@@ -873,10 +1262,14 @@
           return;
         }
 
-        var workflowSection =
-          document.querySelector(".workflow-experts.on .workflow-section") ||
-          document.querySelector(".workflow-section.off") ||
-          document.querySelector(".workflow-section");
+        var workflowSection = window.innerWidth < 992
+          ? document.querySelector(".workflow-mobile-embed")
+          : document.querySelector(".workflow-experts.on .workflow-section");
+
+        if (!workflowSection) {
+          workflowSection = document.querySelector(".workflow-section");
+        }
+
         var height = workflowSection
           ? Math.ceil(workflowSection.getBoundingClientRect().height)
           : Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);

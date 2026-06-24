@@ -6,6 +6,7 @@
   <title>Projects | Akshar Construction</title>
   <link rel="stylesheet" href="../website/quote-modal.css">
   <link rel="stylesheet" href="../website/site-header.css">
+  <link rel="stylesheet" href="../website/page-shared.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@700&display=swap");
 
@@ -1008,19 +1009,6 @@
       }
     }
 
-    .footer-embed-section {
-      width: 100%;
-      background: #071522;
-    }
-
-    .footer-embed {
-      display: block;
-      width: 100%;
-      min-height: 520px;
-      border: 0;
-      overflow: hidden;
-    }
-
     @media (max-width: 1080px) {
       .fp-metrics {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1036,17 +1024,32 @@
         gap: 12px;
       }
 
-      .pg-col--tall {
-        min-height: 240px;
+      .pg-col {
+        display: contents;
       }
 
+      .pg-tile {
+        height: 190px;
+        min-height: 190px;
+      }
+
+      .pg-col--tall,
       .pg-col--stack {
-        grid-template-rows: minmax(160px, 1fr) minmax(160px, 1fr);
+        min-height: 0;
       }
 
-      .pg-col--hero {
-        grid-column: 1 / -1;
-        min-height: 280px;
+      .pg-tile img {
+        object-position: center top;
+      }
+
+      .pg-col--stack-a .pg-tile:first-child img,
+      .pg-col--stack-a .pg-tile:last-child img,
+      .pg-col--stack-b .pg-tile:first-child img,
+      .pg-col--stack-b .pg-tile:last-child img,
+      .pg-col--tall:first-child .pg-tile img,
+      .pg-col--tall:last-child .pg-tile img,
+      .pg-col--hero .pg-tile img {
+        object-position: center top;
       }
 
       .pj-steps {
@@ -1138,21 +1141,49 @@
       }
 
       .project-gallery-section {
-        padding: 64px 18px 56px;
+        padding: 56px 18px 48px;
         margin-top: 12px;
       }
 
+      .pg-head {
+        margin-bottom: 28px;
+      }
+
       .pg-bento {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        height: auto;
       }
 
-      .pg-col--tall,
-      .pg-col--hero {
-        min-height: 220px;
+      .pg-col {
+        display: contents;
       }
 
-      .pg-col--stack {
-        grid-template-rows: minmax(180px, auto) minmax(180px, auto);
+      .pg-tile {
+        height: 168px;
+        min-height: 168px;
+        border-width: 2px;
+        border-radius: 12px;
+      }
+
+      .pg-tile img {
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .pg-col--stack-a .pg-tile:first-child img,
+      .pg-col--stack-a .pg-tile:last-child img,
+      .pg-col--stack-b .pg-tile:first-child img,
+      .pg-col--stack-b .pg-tile:last-child img,
+      .pg-col--tall:first-child .pg-tile img,
+      .pg-col--tall:last-child .pg-tile img,
+      .pg-col--hero .pg-tile img {
+        object-position: center top;
+      }
+
+      .pg-cta-wrap {
+        margin-top: 24px;
       }
 
       .project-journey-section {
@@ -1172,13 +1203,57 @@
         max-width: 280px;
       }
 
+      .project-stats-section {
+        padding: 18px 12px 18px;
+      }
+
       .project-stats-section__inner {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        border: 1px solid rgba(236, 184, 75, 0.22);
+        border-radius: 12px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .proj-stat {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-height: 112px;
+        padding: 18px 10px;
+        text-align: center;
       }
 
       .proj-stat + .proj-stat {
+        border-left: 1px solid rgba(255, 255, 255, 0.12);
+        border-top: 0;
+      }
+
+      .proj-stat:nth-child(odd) {
         border-left: 0;
+      }
+
+      .proj-stat:nth-child(n + 3) {
         border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .proj-stat svg {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+      }
+
+      .proj-stat strong {
+        font-size: 24px;
+      }
+
+      .proj-stat span {
+        margin-top: 4px;
+        font-size: 10px;
+        line-height: 1.35;
+        max-width: 120px;
       }
     }
   </style>
@@ -1418,13 +1493,6 @@
               <img src="../assets/why-choose-building.png" alt="Completed modern commercial building">
             </figure>
           </div>
-        </div>
-
-        <div class="pg-cta-wrap scroll-reveal scroll-reveal--up" data-reveal-delay="2">
-          <a class="pg-cta" href="#featured-projects">
-            View All Projects
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
-          </a>
         </div>
       </div>
     </section>
