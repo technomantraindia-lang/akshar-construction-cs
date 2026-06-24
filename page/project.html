@@ -896,9 +896,12 @@
 
     /* Stats bar */
     .project-stats-section {
-      background: linear-gradient(90deg, #03111d 0%, #071b2b 50%, #04121f 100%);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(236, 184, 75, 0.14), transparent 34%),
+        linear-gradient(90deg, #03111d 0%, #071b2b 50%, #04121f 100%);
       border-top: 1px solid rgba(236, 184, 75, 0.2);
       border-bottom: 1px solid rgba(236, 184, 75, 0.2);
+      padding: 28px 0;
     }
 
     .project-stats-section__inner {
@@ -1204,7 +1207,8 @@
       }
 
       .project-stats-section {
-        padding: 18px 12px 18px;
+        padding: 40px 16px 28px;
+        margin-top: 12px;
       }
 
       .project-stats-section__inner {
