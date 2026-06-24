@@ -96,7 +96,7 @@ main {
 .intro-copy h2,
 .approach-copy h2,
 .story-copy h2,
-.values-section h2,
+.values-head h2,
 .service-cta-banner__copy h2 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 700;
@@ -114,7 +114,7 @@ main {
 .intro-copy h2 span,
 .approach-copy h2 span,
 .story-copy h2 span,
-.values-section h2 span,
+.values-head h2 span,
 .service-cta-banner__copy h2 span {
   color: var(--about-gold-light);
 }
@@ -322,7 +322,7 @@ main {
 .feature-grid svg,
 .stats-strip svg,
 .pillar-card svg,
-.values-grid svg {
+.value-card__icon svg {
   fill: none;
   stroke: var(--about-gold-light);
   stroke-width: 2;
@@ -554,7 +554,12 @@ main {
   position: relative;
   z-index: 1;
   width: min(1180px, 100%);
-  margin: 34px auto 0;
+  margin: 48px auto 0;
+  padding-top: 8px;
+}
+
+.about-proof .section-heading {
+  margin-bottom: 12px;
 }
 
 .section-heading {
@@ -602,21 +607,25 @@ main {
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  margin-top: 22px;
+  gap: 28px;
+  margin-top: 40px;
 }
 
 .pillar-card {
   position: relative;
-  overflow: hidden;
-  min-height: 200px;
-  padding: 48px 32px 32px;
-  border: 1px solid rgba(232, 228, 220, 0.9);
-  border-radius: 18px;
-  background: linear-gradient(180deg, #fff 0%, #f8f4ed 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 240px;
+  padding: 32px 28px 34px;
+  border: 1px solid rgba(232, 228, 220, 0.95);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff 0%, #faf6ef 100%);
   text-align: center;
-  box-shadow: 0 16px 40px rgba(7, 19, 29, 0.08);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 36px rgba(7, 19, 29, 0.07);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .pillar-card::before {
@@ -626,62 +635,81 @@ main {
   left: 0;
   right: 0;
   height: 4px;
+  border-radius: 20px 20px 0 0;
   background: linear-gradient(90deg, #03111d, var(--about-gold-light), #03111d);
 }
 
 .pillar-card::after {
   content: "";
   position: absolute;
-  right: -20px;
-  bottom: -20px;
-  width: 100px;
-  height: 100px;
+  right: -16px;
+  bottom: -16px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(236, 184, 75, 0.1), transparent 68%);
+  background: radial-gradient(circle, rgba(236, 184, 75, 0.12), transparent 68%);
   pointer-events: none;
+  transition: transform 0.28s ease;
 }
 
 .pillar-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(236, 184, 75, 0.45);
-  box-shadow: 0 20px 40px rgba(7, 19, 29, 0.12);
+  transform: translateY(-8px);
+  border-color: rgba(236, 184, 75, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 24px 48px rgba(7, 19, 29, 0.12);
+}
+
+.pillar-card:hover::after {
+  transform: scale(1.12);
 }
 
 .pillar-icon {
-  position: absolute;
-  top: -22px;
-  left: 50%;
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 3px solid #fff;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 22px;
+  border: 2px solid rgba(236, 184, 75, 0.35);
   border-radius: 50%;
-  background: linear-gradient(145deg, #02111e, #071c2d);
-  transform: translateX(-50%);
-  box-shadow: 0 8px 16px rgba(3, 17, 29, 0.18);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(236, 184, 75, 0.2), transparent 50%),
+    linear-gradient(145deg, #071b2b, #03111d);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.95),
+    0 12px 28px rgba(3, 17, 29, 0.2);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.95),
+    0 16px 32px rgba(236, 184, 75, 0.22);
 }
 
 .pillar-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
 }
 
 .pillar-card h3 {
   color: var(--about-ink);
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .pillar-card p {
-  max-width: 290px;
+  max-width: 300px;
   margin: 12px auto 0;
   color: var(--about-muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
 /* Approach */
@@ -926,11 +954,18 @@ main {
 }
 
 .story-copy h2,
-.values-section h2 {
+.values-head h2 {
   max-width: 560px;
   margin-top: 14px;
   color: var(--about-ink);
   font-size: clamp(32px, 3.4vw, 46px);
+}
+
+.values-head h2 {
+  max-width: none;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
 }
 
 .story-copy p {
@@ -1410,22 +1445,30 @@ main {
 
   .pillars-grid {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 28px;
+    margin-top: 32px;
   }
 
   .pillar-card {
     max-width: 560px;
     margin: 0 auto;
+    min-height: 0;
+    padding: 28px 24px 30px;
+  }
+
+  .pillar-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
   }
 
   .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .values-grid article:last-child {
-    grid-column: 1 / -1;
-    max-width: 420px;
-    margin: 0 auto;
+  .value-card,
+  .value-card--wide {
+    grid-column: span 1;
   }
 
   .service-cta-banner__inner {
@@ -1464,6 +1507,32 @@ main {
   .story-section,
   .values-section {
     padding: 56px 18px;
+  }
+
+  .values-head h2 {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  .values-lead {
+    font-size: 14px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+
+  .value-card,
+  .value-card--wide {
+    grid-column: span 1;
+    min-height: 0;
+    padding: 22px 20px 24px;
+  }
+
+  .value-card p,
+  .value-card--wide p {
+    max-width: none;
   }
 
   .about-proof {
@@ -1536,8 +1605,7 @@ main {
   }
 
   .feature-grid,
-  .stats-strip,
-  .values-grid {
+  .stats-strip {
     grid-template-columns: 1fr;
   }
 
@@ -1624,10 +1692,6 @@ main {
     margin-top: 0;
     font-size: 12px;
     line-height: 1.35;
-  }
-
-  .values-grid article:last-child {
-    max-width: none;
   }
 
   .service-cta-banner__inner {
