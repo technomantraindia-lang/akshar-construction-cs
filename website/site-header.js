@@ -1,6 +1,6 @@
 (function initSiteHeader() {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
+  const toggle = document.querySelector(".menu-toggle, .home-process-menu-toggle");
+  const menu = document.querySelector(".nav-menu, .home-process-nav-menu");
   if (!toggle || !menu) return;
 
   const setMenuOpen = (open) => {

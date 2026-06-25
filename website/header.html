@@ -57,6 +57,20 @@
       flex-shrink: 0;
     }
 
+    .brand-logo {
+      display: block;
+      width: 128px;
+      height: 86px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      object-fit: contain;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      background: linear-gradient(145deg, rgba(10, 28, 44, 0.98), rgba(4, 14, 24, 0.98));
+      border: 1px solid rgba(236, 184, 75, 0.38);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
+    }
+
     .brand-mark {
       position: relative;
       width: 44px;
@@ -304,17 +318,7 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="#" aria-label="Akshar Construction home">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="tower"></span>
-          <span class="tower"></span>
-          <span class="tower"></span>
-          <span class="tower"></span>
-          <span class="tower"></span>
-        </span>
-        <span>
-          <span class="brand-name">AKSHAR</span>
-          <span class="brand-tagline">CONSTRUCTION</span>
-        </span>
+        <img class="brand-logo" src="../assets/logo%2048%20(73).png" alt="Akshar Construction" width="132" height="100" decoding="async">
       </a>
 
       <ul class="nav-menu" id="navMenu">

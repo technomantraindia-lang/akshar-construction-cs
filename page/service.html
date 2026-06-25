@@ -7,17 +7,14 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="service.css">
   <link rel="stylesheet" href="../website/page-shared.css">
+  <link rel="stylesheet" href="../website/site-header.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="../index.html#home" aria-label="Akshar Construction home">
-        <span class="brand-mark" aria-hidden="true">
-          <i></i><i></i><i></i><i></i><i></i>
-        </span>
-        <span>
-          <strong>AKSHAR</strong>
-          <small>CONSTRUCTION</small>
+        <span class="brand-logo-shell">
+          <img class="brand-logo" src="../assets/logo%2048%20(73).png" alt="Akshar Construction" width="132" height="100" decoding="async">
         </span>
       </a>
 
@@ -48,7 +45,7 @@
       <div class="service-hero__inner">
         <span class="eyebrow"><i></i> Our Services</span>
         <h1>Building With <span>Excellence</span></h1>
-        <p>End-to-end construction solutions tailored to your vision. We deliver quality projects on time and within budget.</p>
+        <p>Complete construction solutions for residential, commercial, industrial, civil and turnkey projects — built with quality, safety and on-time delivery.</p>
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="../index.html#home">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -66,91 +63,85 @@
         <header class="svc-section-head scroll-reveal scroll-reveal--up">
           <span class="pill">What We Offer</span>
           <h2>Our <span>Services</span></h2>
-          <p>From residential builds to industrial warehouses — we deliver end-to-end construction with planning, supervision, and quality control.</p>
+          <p>Complete construction solutions for homes, commercial spaces, industrial facilities, and turnkey projects — delivered with quality, planning, and trusted execution.</p>
         </header>
 
         <div class="svc-grid">
-        <article class="svc-card scroll-reveal scroll-reveal--left">
+        <article class="svc-card scroll-reveal scroll-reveal--left" id="residential-construction">
           <div class="svc-card__body">
             <div class="svc-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M8 23 24 10l16 13M12 22v20h24V22M18 42V29h12v13M6 42h36M16 20h16"/></svg>
             </div>
             <h3>Residential Construction</h3>
-            <p>Custom homes, villas, and housing projects built with quality materials and modern design.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
+            <p>Complete home, villa, bungalow and apartment construction with strong planning, quality materials and elegant finishing.</p>
           </div>
           <figure class="svc-card__media">
-            <img src="../assets/gallery-building.png" alt="Residential construction project">
+            <img src="../assets/service/Residential%20Construction.png" alt="Residential construction project">
           </figure>
         </article>
 
-        <article class="svc-card scroll-reveal scroll-reveal--up" data-reveal-delay="1">
+        <article class="svc-card scroll-reveal scroll-reveal--up" data-reveal-delay="1" id="commercial-construction">
           <div class="svc-card__body">
             <div class="svc-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M9 42V10h20v32M29 21h10v21M15 16h4m-4 7h4m-4 7h4m16-3h3m-3 6h3M13 42V36h8v6"/></svg>
             </div>
             <h3>Commercial Construction</h3>
-            <p>Office complexes, retail spaces, and mixed-use buildings delivered with precision and premium finish.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
+            <p>Professional construction of offices, showrooms and commercial spaces designed for functionality, durability and business growth.</p>
           </div>
           <figure class="svc-card__media">
-            <img src="../assets/why-choose-building.png" alt="Commercial building construction">
+            <img src="../assets/service/Commercial%20Construction.png" alt="Commercial building construction">
           </figure>
         </article>
 
-        <article class="svc-card scroll-reveal scroll-reveal--right" data-reveal-delay="2">
+        <article class="svc-card scroll-reveal scroll-reveal--right" data-reveal-delay="2" id="industrial-construction">
           <div class="svc-card__body">
             <div class="svc-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M6 21 24 8l18 13M9 21h30v20H9zM14 26h20M14 31h20M14 36h20M19 21v20m10-20v20"/></svg>
             </div>
             <h3>Industrial Construction</h3>
-            <p>Warehouses, factories, and logistics facilities engineered for efficiency, safety, and durability.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
+            <p>Robust factories, warehouses and industrial facilities built for performance, safety and long-term operational efficiency.</p>
           </div>
           <figure class="svc-card__media">
-            <img src="../assets/featured-warehouse.png" alt="Industrial warehouse construction">
+            <img src="../assets/service/Industrial%20Construction.png" alt="Industrial warehouse construction">
           </figure>
         </article>
 
-        <article class="svc-card scroll-reveal scroll-reveal--right">
+        <article class="svc-card scroll-reveal scroll-reveal--left" id="civil-construction-work">
+          <div class="svc-card__body">
+            <div class="svc-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 38V14l16-8 16 8v24M14 38V22h20v16M18 30h4m8 0h4M20 14v8m8-8v8"/></svg>
+            </div>
+            <h3>Civil Construction Work</h3>
+            <p>Reliable RCC, masonry, flooring, plastering and site development services executed with precision and structural strength.</p>
+          </div>
+          <figure class="svc-card__media">
+            <img src="../assets/service/Civil%20Construction%20Work.png" alt="Civil construction and structural work">
+          </figure>
+        </article>
+
+        <article class="svc-card scroll-reveal scroll-reveal--right" id="renovation-remodeling">
           <div class="svc-card__body">
             <div class="svc-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M12 25 6 31l11 11 6-6M36 25l6 6-11 11-6-6M17 20l7-7 7 7M15 27l9 9 9-9"/></svg>
             </div>
             <h3>Renovation &amp; Remodeling</h3>
-            <p>Transform existing spaces with structural upgrades, interior redesign, and modern finishes.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
+            <p>Upgrade existing spaces with smart renovation, modern redesign and high-quality improvements for better utility and appeal.</p>
           </div>
           <figure class="svc-card__media">
-            <img src="../assets/about-construction.png" alt="Renovation and remodeling project">
+            <img src="../assets/service/Renovation%20%26%20Remodeling.png" alt="Renovation and remodeling project">
           </figure>
         </article>
 
-        <article class="svc-card scroll-reveal scroll-reveal--down" data-reveal-delay="1">
-          <div class="svc-card__body">
-            <div class="svc-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M8 38V14l16-8 16 8v24M14 38V22h20v16M18 30h4m8 0h4M20 14v8m8-8v8"/></svg>
-            </div>
-            <h3>Architectural Design</h3>
-            <p>Concept-to-blueprint planning that balances aesthetics, function, and buildability for every project.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
-          </div>
-          <figure class="svc-card__media">
-            <img src="../assets/gallery-rebar.png" alt="Architectural design and planning">
-          </figure>
-        </article>
-
-        <article class="svc-card scroll-reveal scroll-reveal--left" data-reveal-delay="2">
+        <article class="svc-card scroll-reveal scroll-reveal--down" data-reveal-delay="1" id="turnkey-construction-projects">
           <div class="svc-card__body">
             <div class="svc-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><circle cx="19" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M8 39v-4c0-7 4-11 11-11s11 4 11 11v4M29 26c2-1 4-2 6-2 5 0 9 4 9 10v5"/></svg>
             </div>
-            <h3>Project Management</h3>
-            <p>End-to-end coordination of timelines, budgets, vendors, and on-site execution with full transparency.</p>
-            <a class="svc-card__link" href="mailto:info@aksharconstruction.com">Learn More <span aria-hidden="true">→</span></a>
+            <h3>Turnkey Construction Projects</h3>
+            <p>End-to-end project execution from planning and procurement to construction, supervision and final handover.</p>
           </div>
           <figure class="svc-card__media">
-            <img src="../assets/gallery-worker.png" alt="Construction project management on site">
+            <img src="../assets/service/Turnkey%20Construction%20Projects.png" alt="Turnkey construction project management on site">
           </figure>
         </article>
       </div>
@@ -218,8 +209,8 @@
                 Start the Conversation
                 <svg viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg>
               </a>
-              <a class="service-cta-btn service-cta-btn--outline" href="tel:+918511366152">
-                Call +91 85113 66152
+              <a class="service-cta-btn service-cta-btn--outline" href="tel:+919875020688">
+                Call +91 98750 20688
               </a>
             </div>
           </div>

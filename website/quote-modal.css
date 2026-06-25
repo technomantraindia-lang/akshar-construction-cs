@@ -53,6 +53,14 @@
   gap: 18px;
 }
 
+.quote-modal__brand-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .quote-modal__brand-icon {
   width: 52px;
   height: 52px;

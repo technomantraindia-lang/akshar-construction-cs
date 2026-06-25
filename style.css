@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab:wght@700&display=swap");
 @import url("website/quote-modal.css");
-@import url("website/site-header.css");
 
 :root {
   --navy: #03111d;
@@ -66,12 +65,11 @@ a {
 
 .hero {
   position: relative;
-  height: calc(100vh - 72px);
+  height: calc(100vh - var(--header-height, 118px));
   min-height: 550px;
   max-height: 780px;
   overflow: visible;
   background: url("assets/construction-hero.png") center center / cover no-repeat;
-  border-top: 1px solid rgba(217, 154, 40, 0.65);
 }
 
 .hero-shade {
@@ -1903,7 +1901,7 @@ a {
 
   .hero-content {
     width: calc(100% - 36px);
-    padding: 56px 0 18px;
+    padding: 28px 0 18px;
     margin: 0 auto;
   }
 
@@ -2316,8 +2314,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 16px 20px;
+  gap: 20px;
+  padding: 18px 22px;
   border: 1px solid rgba(236, 184, 75, 0.42);
   border-radius: 12px;
   background: linear-gradient(135deg, rgba(3, 17, 29, 0.94), rgba(7, 27, 43, 0.9));
@@ -2328,13 +2326,23 @@ a {
 .contact-visual-badge__brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.contact-visual-badge .brand-mark {
-  transform: scale(0.86);
-  transform-origin: left center;
+.contact-visual-badge .brand-logo {
+  width: 108px;
+  height: 84px;
+  padding: 6px 8px;
+  border-radius: 14px;
+  object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, rgba(10, 28, 44, 0.98), rgba(4, 14, 24, 0.98));
+  border: 1px solid rgba(236, 184, 75, 0.42);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 0 16px rgba(236, 184, 75, 0.1);
 }
 
 .contact-visual-badge__text strong,
@@ -2790,6 +2798,12 @@ a {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
+  }
+
+  .contact-visual-badge .brand-logo {
+    width: 88px;
+    height: 70px;
+    padding: 5px 7px;
   }
 
   .contact-visual-badge__tagline {
